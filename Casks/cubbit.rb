@@ -1,6 +1,6 @@
 cask "cubbit" do
-  version "9.0.5"
-  sha256 "3dfadee2aeb0912f1b5215b7ccd80281141bacb5bd568b4d57543b9043973948"
+  version "9.1.4"
+  sha256 "e93feb1290dfde0350ede3f388cddfd2aeee2321eb7d980e959dc5887bd8add3"
 
   url "https://get.cubbit.io/desktop/mac/Cubbit-#{version}.dmg"
   name "Cubbit"
