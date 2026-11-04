@@ -3,24 +3,23 @@ cask "dfsctl" do
   version "0.36.0"
 
   on_macos do
-    on_intel do
-      sha256 "2205e71fe6ee5f9c67c2299616aa324b243c16cba2ee73f560ac2cbb90dee609"
-      url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfsctl_#{version}_Darwin_x86_64.tar.gz"
-    end
     on_arm do
       sha256 "ef9ea670d07e8924491e36c4c741f48d892a4640070ca29738b4d28e680e53a3"
       url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfsctl_#{version}_Darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "1c5011088de81e5c136e3d94984c1ea133464600fc1dcf64c0b83afb6dd2797f"
-      url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfsctl_#{version}_Linux_x86_64.tar.gz"
+      sha256 "2205e71fe6ee5f9c67c2299616aa324b243c16cba2ee73f560ac2cbb90dee609"
+      url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfsctl_#{version}_Darwin_x86_64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "02fcc65f683b8296c80c8ead0806259de2d59e587a01a50ffcfc179fff248141"
       url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfsctl_#{version}_Linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "1c5011088de81e5c136e3d94984c1ea133464600fc1dcf64c0b83afb6dd2797f"
+      url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfsctl_#{version}_Linux_x86_64.tar.gz"
     end
   end
 
@@ -34,6 +33,5 @@ cask "dfsctl" do
 
   binary "dfsctl"
 
-  # No zap stanza required
-
+  zap :not_required
 end
