@@ -3,29 +3,28 @@ cask "dfs" do
   version "0.36.0"
 
   on_macos do
-    on_intel do
-      sha256 "ad7a3890b06e09e68dbf9e996dd02835b9e0af990b7eb54a4ce1914bc2116ca7"
-      url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfs_#{version}_Darwin_x86_64.tar.gz"
-    end
     on_arm do
       sha256 "6e37e011dfcbb6dc530f76542c5a5f81a8e67b1934b99be41f4cbd98e7f97e4e"
       url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfs_#{version}_Darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "f8a22de76442b9a39e1da997aa1c213da8b81a33f23bb19334acd1178b6f0a6e"
-      url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfs_#{version}_Linux_x86_64.tar.gz"
+      sha256 "ad7a3890b06e09e68dbf9e996dd02835b9e0af990b7eb54a4ce1914bc2116ca7"
+      url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfs_#{version}_Darwin_x86_64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "8d76fcbd6b01dd9c3afcf2a224e8ea8b2e869cc06c0d4a785c67e664f9181420"
       url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfs_#{version}_Linux_arm64.tar.gz"
     end
+    on_intel do
+      sha256 "f8a22de76442b9a39e1da997aa1c213da8b81a33f23bb19334acd1178b6f0a6e"
+      url "https://github.com/cubbit/dittofs/releases/download/v#{version}/dfs_#{version}_Linux_x86_64.tar.gz"
+    end
   end
 
   name "dfs"
-  desc "DittoFS server daemon — modular virtual filesystem with pluggable storage backends"
+  desc "DittoFS server daemon: modular virtual filesystem with pluggable storage"
   homepage "https://github.com/cubbit/dittofs"
 
   livecheck do
@@ -34,6 +33,5 @@ cask "dfs" do
 
   binary "dfs"
 
-  # No zap stanza required
-
+  zap :not_required
 end
